@@ -1,17 +1,38 @@
+/** 
+ * @author Fabrizio La volpe
+ * @version 1.0
+ * @since 10/05/2023
+ * 
+*/
 public class EAN13 {
     
     private String codice;
 
-   
+   /**
+    * classe costruttore che ha il compito di creare un nuovo codice EAN13
+    * @param c diventa il nuovo codice EAN13
+    */
     public void setCodice(String c){
         codice = c;
     }
 
+    /**
+     * metodo per mandare in stampa il codice 
+     * @return ritorna il codice creato in precedenza
+     */
     public String getCodice(){
         return codice;
     }
 
-
+    /**
+     *  metodo per verificare se il codice è nullo, di lunghezza sbagliata , calcola la cifra du controllo, confronta la cifra di controllo con quella contenuta nel codice EAN13
+     *  @param codice creato in precedenza
+     *  @param somma 
+     *  @param cifra 
+     *  @param cifraDiControllo
+     * 
+     * @return la cifra di controllo
+     */
     public boolean verificaCodice(){
 
         // Verifica se l'attributo codice è vuoto o nullo
