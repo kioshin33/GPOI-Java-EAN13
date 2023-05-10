@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,6 +25,19 @@ public class testEAN13 {
     public void testEanVerificaCodiceNonValido(){
         EAN13.setEAN13("3614273613422");
         assertFalse(EAN13.verificaCodice());
+    }
+
+    @Test
+    public void testEanVerificaCodiceLunghezzaNonValida(){
+        EAN13.setEAN13("3614273613422");
+        assertFalse(EAN13.verificaCodice());
+    }
+
+    @Test
+    public void testEanVerificaCodiceVuoto(){
+        EAN13.setEAN13("3614273613422");
+        assertThrows(NullPointerException.class,null);    
+    
     }
 
     

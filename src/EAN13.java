@@ -66,5 +66,8 @@ public class EAN13 {
         return cifraDiControllo == Character.getNumericValue(codice.charAt(12)); 
     }
 
+    public void setEAN13(String string) {
+    }
+
 
 }
